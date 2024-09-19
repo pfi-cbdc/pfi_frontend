@@ -1,6 +1,6 @@
 'use client'
 
-import TeamCard from '@/components/TeamCard'
+import TeamCard from '../../components/TeamCard'
 import Image from 'next/image'
 import React, { useState, useEffect } from 'react'
 

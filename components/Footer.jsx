@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <h3 className="text-xl font-semibold mb-4">Contact</h3>
-            <p>F 303, Kruthi Apartments,</p>
+            {/*<p>F 303, Kruthi Apartments,</p> */}
             <p>Hennur, Bengaluru,</p>
             <p>Karnataka, India, 560043</p>
             <p><a href="mailto:sales@xaults.com" className="hover:text-yellow-500">maildgdg</a></p>
@@ -18,8 +18,7 @@ const Footer = () => {
           </div>
 
           <div className='mr-14'>
-            <h3 className="text-xl font-semibold mb-4">Ready to transform your financial landscape?</h3>
-            <p className="mb-4">Experience seamless transactions, enhanced security, and unparalleled convenience.</p>
+            <p className="mb-4">And I dont want to miss anything...</p>
             <form>
               <input type="email" placeholder="Email *" required className="bg-gray-800 text-white px-4 py-2 rounded-full mb-2 w-full" />
               <button type="submit" className="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full hover:bg-yellow-500 transition duration-300 w-full">
@@ -31,8 +30,8 @@ const Footer = () => {
           <div className='ml-5'>
             <h3 className="text-xl font-semibold mb-4">Menu</h3>
             <Link href="/" className="block mb-2 hover:text-yellow-500">Home</Link>
-            {/*<Link href="/solutions" className="block mb-2 hover:text-yellow-500">Solutions</Link>
-            <Link href="/technology" className="block mb-2 hover:text-yellow-500">Technology</Link> */}
+            <Link href="/solutions" className="block mb-2 hover:text-yellow-500">Solutions</Link>
+            {/*<Link href="/technology" className="block mb-2 hover:text-yellow-500">Technology</Link> */}
             <Link href="/about" className="block mb-2 hover:text-yellow-500">About us</Link>
           </div>
 

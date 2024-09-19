@@ -1,11 +1,15 @@
-import HeroSection from "@/components/HeroSection";
+import HeroSection from "../components/HeroSection";
+import { Spotlight } from "../components/ui/Spotlight";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div>
-      <h1 className="pt-24 m-10">Home page</h1>
+    <div className="pt-24 mt-10">
       <div className="m-10">
+      <Spotlight
+        className="-top-40 left-0 md:left-60 md:-top-20"
+        fill="yellow"
+      />
         <HeroSection />
       </div>
       

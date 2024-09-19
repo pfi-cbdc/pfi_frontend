@@ -1,6 +1,6 @@
 'use client'
 
-import ContactCard from "@/components/ContactCard";
+import ContactCard from "../../components/ContactCard";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
