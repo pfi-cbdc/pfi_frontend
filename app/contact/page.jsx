@@ -17,7 +17,7 @@ const ContactForm = () => {
 
   return (
     <div className="relative min-h-screen overflow-hidden pb-5">
-      <Image
+      {/*<Image
         src="/images/contact.jpg"
         alt="Contact background"
         layout="fill"
@@ -25,7 +25,7 @@ const ContactForm = () => {
         quality={100}
         className="pr-12 pl-1 w-full h-auto"
         priority
-      />
+      /> */}
 
       <div className={`absolute inset-0 bg-black bg-opacity-50 transition-transform duration-1000 ease-out ${showContent ? 'translate-x-0' : 'translate-x-full'}`} />
       <div className={`relative pt-24 p-1 flex justify-end items-center h-full transition-transform duration-1000 ease-out ${showContent ? 'translate-x-0' : 'translate-x-full'}`}>

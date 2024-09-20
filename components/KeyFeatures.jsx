@@ -12,7 +12,9 @@ const FeatureBox = ({ title, description }) => (
 const CreditOfferingFeatures = () => {
   return (
     <div className="credit-offering-container max-w-6xl mx-auto pb-10 pl-4 pr-8">
-      <h1 className="text-4xl font-bold px-10 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 pb-4 mb-8 -mt-20 border-b border-zinc-900">Key Features</h1>
+      <h1 className="text-4xl font-bold  bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 pb-4 mb-8 -mt-20 border-b border-zinc-900">
+      Helping creditworthy people to get loan at their ease without raising any risk...
+      </h1>
       
       <div className="features-grid grid grid-cols-1 md:grid-cols-2 gap-6">
         <BackgroundGradient className='rounded-[22px] bg-zinc-900 overflow-hidden py-4'>

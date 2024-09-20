@@ -30,7 +30,7 @@ const TeamCard = () => {
       {teamMembers.map((member, index) => (
         <div
           key={index}
-          className="bg-gray-900 shadow-lg rounded-lg overflow-hidden border border-gray-700 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 w-52 mx-auto"
+          className="bg-zinc-900 shadow-lg rounded-lg overflow-hidden border-b border-gray-700 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 w-52 mx-auto"
         >
           <div className="relative h-48 w-full">
             <Image
@@ -38,7 +38,7 @@ const TeamCard = () => {
               alt={member.name}
               layout="fill"
               objectFit="cover"
-              className="rounded-t-lg transition-opacity duration-300 hover:opacity-80"
+              className="transition-opacity duration-300 hover:opacity-80"
             />
           </div>
           <div className="p-4 text-center">

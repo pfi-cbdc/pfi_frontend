@@ -1,11 +1,19 @@
-import Link from 'next/link'
-import React from 'react'
+'use client'
+import React, { useRef } from 'react'
 import { Button } from "./ui/moving-border";
 import KeyFeatures from './KeyFeatures';
 import { BackgroundLines } from './ui/background-lines';
 import { HoverBorderGradient } from './ui/hover-border-gradient';
+import Accordion from './Accordion';
+import Link from 'next/link';
 
 function HeroSection() {
+  const keyFeaturesRef = useRef(null);
+
+  const scrollToKeyFeatures = () => {
+    keyFeaturesRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div>
 
@@ -20,14 +28,13 @@ function HeroSection() {
             Built on DLT and Smart Contracts
           </p>
           <div className="flex justify-center mt-8">
-            <Link href="/solutions">
             <HoverBorderGradient
              containerClassName="rounded-full"
               as="button"
+              onClick={scrollToKeyFeatures}
               className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 p-4 px-7">
                 Read more
               </HoverBorderGradient>  
-            </Link>
           </div>
         </div>
       </div>
@@ -36,9 +43,26 @@ function HeroSection() {
      
 
     {/* niche wala card*/}
-    <div className="mt-[-260px]">
+    <div className="mt-[-240px]" ref={keyFeaturesRef}>
     <KeyFeatures/>
     </div>
+
+    <div>
+      <Accordion/>
+    </div>
+
+    <div >
+      <h3 className="flex justify-center mt-8 text-3xl p-1">
+        If you&apos;d like more information about our features, get in touch today.
+        </h3>
+      <div className="flex justify-center mt-6" >
+      <Link href="/contact" className="bg-yellow-400 text-black font-semibold py-3 text-xl px-6 rounded-full hover:bg-yellow-500 ml-2">
+          Get in touch
+        </Link>  
+          </div>
+
+    </div>
+
     </div>
 
   
