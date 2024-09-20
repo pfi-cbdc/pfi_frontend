@@ -16,7 +16,7 @@ const ContactForm = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div className="relative min-h-screen overflow-hidden pb-5">
       <Image
         src="/images/contact.jpg"
         alt="Contact background"

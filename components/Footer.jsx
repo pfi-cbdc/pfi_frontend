@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-900 text-yellow-400 py-8 px-8">
+    <footer className="bg-black text-slate-400 py-8 pt-10 px-8">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
@@ -17,12 +17,12 @@ const Footer = () => {
             </button>
           </div>
 
-          <div className='mr-14'>
+          <div className='mr-16'>
             <p className="mb-4">And I dont want to miss anything...</p>
             <form>
               <input type="email" placeholder="Email *" required className="bg-gray-800 text-white px-4 py-2 rounded-full mb-2 w-full" />
               <button type="submit" className="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full hover:bg-yellow-500 transition duration-300 w-full">
-                Submit
+                Subscribe
               </button>
             </form>
           </div>
