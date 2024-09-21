@@ -10,6 +10,12 @@ import { motion } from 'framer-motion';
 
 function HeroSection() {
   const keyFeaturesRef = useRef(null);
+  const topRef = useRef(null);
+
+  useEffect(() => {
+    // Scroll to top when component mounts
+    topRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, []);
 
   const scrollToKeyFeatures = () => {
     keyFeaturesRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -27,6 +33,7 @@ function HeroSection() {
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div ref={topRef}></div>
       <motion.div 
         className="py-8 sm:py-16 md:py-24"
         initial="hidden"
