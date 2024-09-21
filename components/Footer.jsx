@@ -38,8 +38,8 @@ const Footer = () => {
 
           <div>
             <h3 className="text-xl font-semibold mb-4 text-slate-400">Follow us on</h3>
-            <Link href="https://www.linkedin.com" className="block mb-2 hover:text-yellow-500">LinkedIn</Link>
-            <Link href="https://www.twitter.com" className="block mb-2 hover:text-yellow-500">Twitter</Link>
+            <Link href="https://www.linkedin.com/in/p-fi-15939532a/" className="block mb-2 hover:text-yellow-500">LinkedIn</Link>
+            {/*<Link href="https://www.twitter.com" className="block mb-2 hover:text-yellow-500">Twitter</Link>*/}
           </div>
         </div>
 

@@ -41,7 +41,8 @@ function HeroSection() {
         <KeyFeatures/>
       </div>
 
-      <div className="py-12 sm:py-16 md:py-24 bg-zinc-950">
+      <div className="py-8 sm:py-16 md:py-16 bg-zinc-950">
+        <h2 className="text-3xl pl-24 sm:text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-yellow-400 to-yellow-600 text-transparent bg-clip-text">About us</h2>
         <Accordion/>
       </div>
 

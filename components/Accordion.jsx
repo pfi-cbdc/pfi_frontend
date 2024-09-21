@@ -25,14 +25,18 @@ const AccordionItem = ({ title, content }) => {
 
 const Accordion = () => {
   const items = [
-    { title: 'Accordion 1', content: 'Description for Accordion 1' },
-    { title: 'Accordion 2', content: 'Description for Accordion 2' },
-    { title: 'Accordion 3', content: 'Description for Accordion 3' },
-    { title: 'Accordion 4', content: 'Description for Accordion 4' },
+    { title: 'What is PFi?', 
+      content: 'PFi is a decentralized peer-to-peer (P2P) lending and borrowing platform using blockchain and CBDC (e-RUPI). It connects lenders and borrowers directly, automating transactions through smart contracts for faster, secure, and transparent lending.' },
+    { title: 'How does PFi ensure security?', 
+      content: 'PFi uses Hyperledger-based blockchain and smart contracts to secure transactions. Escrow services, digital payments via e-RUPI, and a decentralized reputation system create trust between lenders and borrowers.' },
+    { title: 'What are the benefits of PFi?', 
+      content: 'PFi offers lower fees, faster processing, and broader access to lending without intermediaries. With blockchain and CBDC integration, it ensures transparency, security, and greater financial inclusion.' },
+    { title: 'How does PFi reduce loan defaults?', 
+      content: 'PFi uses smart contracts, automated payments, and risk assessment to enforce loan terms, reducing defaults and Non-Performing Assets (NPAs) through secure and transparent blockchain technology.' },
   ];
 
   return (
-    <div className="w-full sm:w-11/12 md:w-4/5 mx-auto mt-4 sm:mt-6 md:mt-8 bg-zinc-950 p-3 sm:p-4 md:p-6 rounded-lg">
+    <div className="w-full sm:w-11/12 md:w-4/5 mx-auto mt-4 sm:mt-6 md:mt-8 bg-zinc-950 p-2 sm:p-4 md:p-4 rounded-lg">
       {items.map((item, index) => (
         <AccordionItem key={index} title={item.title} content={item.content} />
       ))}
