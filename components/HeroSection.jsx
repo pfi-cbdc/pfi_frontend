@@ -15,57 +15,47 @@ function HeroSection() {
   };
 
   return (
-    <div>
-
-    <BackgroundLines className='-mb-20'>
-
-    <div className="-mb-30 max-w-7xl mx-auto relative z-10 w-full pt-20 md:pt-0 overflow-hidden">
-        <div className="animate-slide-in-left">
-          <h1 className="text-5xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4 px-2 mb-6">
-            Transforming the<br /> digital lending...
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="py-8 sm:py-16 md:py-24">
+        <div className="max-w-3xl mx-auto text-center">
+          <h1 className="text-3xl pb-2 sm:text-4xl md:text-6xl lg:text-6xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-white to-gray-300 text-transparent bg-clip-text">
+            Transforming the<br className="hidden sm:inline" />digital lending...
           </h1>
-          <p className="mt-6 mb-4 pb-6 text-3xl font-normal max-w-lg text-center mx-auto bg-clip-text text-transparent bg-gradient-to-b from-yellow-200 to-yellow-500">
+          <p className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-8 text-yellow-600">
             Built on DLT and Smart Contracts
           </p>
-          <div className="flex justify-center mt-8">
+          <div className="mb-8 sm:mb-12 flex justify-center">
             <HoverBorderGradient
-             containerClassName="rounded-full"
+              containerClassName="rounded-full"
               as="button"
               onClick={scrollToKeyFeatures}
-              className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 p-4 px-7">
-                Read more
-              </HoverBorderGradient>  
+              className="px-4 sm:px-6 py-2 sm:py-3 text-base sm:text-lg font-semibold text-white bg-zinc-950 hover:bg-yellow-600 transition duration-300"
+            >
+              Read more
+            </HoverBorderGradient>  
           </div>
         </div>
       </div>
-
-    </BackgroundLines>
      
+      <div ref={keyFeaturesRef} className="py-1 sm:py-8 md:py-4">
+        <KeyFeatures/>
+      </div>
 
-    {/* niche wala card*/}
-    <div className="mt-[-240px]" ref={keyFeaturesRef}>
-    <KeyFeatures/>
-    </div>
+      <div className="py-12 sm:py-16 md:py-24 bg-zinc-950">
+        <Accordion/>
+      </div>
 
-    <div>
-      <Accordion/>
-    </div>
-
-    <div >
-      <h3 className="flex justify-center mt-8 text-3xl p-1">
-        If you&apos;d like more information about our features, get in touch today.
+      <div className="py-12 sm:py-16 md:py-24 text-center">
+        <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 sm:mb-8 bg-gradient-to-r from-white to-gray-300 text-transparent bg-clip-text">
+          If you&apos;d like more information about our features, get in touch today.
         </h3>
-      <div className="flex justify-center mt-6" >
-      <Link href="/contact" className="bg-yellow-400 text-black font-semibold py-3 text-xl px-6 rounded-full hover:bg-yellow-500 ml-2">
-          Get in touch
-        </Link>  
-          </div>
-
+        <div>
+          <Link href="/contact" className="inline-block px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold bg-zinc-900 rounded-full hover:bg-yellow-600 transition duration-300 border border-slate-500">
+            <span className="bg-gradient-to-r from-white to-gray-300 text-transparent bg-clip-text">Get in touch</span>
+          </Link>  
+        </div>
+      </div>
     </div>
-
-    </div>
-
-  
   )
 }
 

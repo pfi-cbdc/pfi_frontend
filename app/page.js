@@ -4,10 +4,10 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="pt-24 mt-10">
-      <div className="m-10">
+    <div className="pt-12 mt-8">
+      <div className="m-6">
       <Spotlight
-        className="-top-40 left-0 md:left-60 md:-top-20"
+        className="-top-20 left-0 md:left-40 md:-top-20"
         fill="yellow"
       />
         <HeroSection />

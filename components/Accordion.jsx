@@ -10,15 +10,15 @@ const AccordionItem = ({ title, content }) => {
   };
 
   return (
-    <div className="border-b border-zinc-700 mb-4">
+    <div className="border-b border-zinc-700 mb-2 sm:mb-3 md:mb-4">
       <div 
-        className="flex justify-between items-center cursor-pointer p-4 bg-zinc-900 text-white"
+        className="flex justify-between items-center cursor-pointer p-2 sm:p-3 md:p-4 bg-zinc-900 text-white"
         onClick={toggleAccordion}
       >
-        <h3 className="text-yellow-700">{title}</h3>
+        <h3 className="text-yellow-700 text-sm sm:text-base md:text-lg">{title}</h3>
         {isOpen ? <FaChevronUp /> : <FaChevronDown />}
       </div>
-      {isOpen && <div className="p-4 bg-zinc-900 text-slate-300">{content}</div>}
+      {isOpen && <div className="p-2 sm:p-3 md:p-4 bg-zinc-900 text-slate-300 text-sm sm:text-base">{content}</div>}
     </div>
   );
 };
@@ -32,7 +32,7 @@ const Accordion = () => {
   ];
 
   return (
-    <div className="w-4/5 mx-auto mt-8 bg-zinc-950 p-6 rounded-lg">
+    <div className="w-full sm:w-11/12 md:w-4/5 mx-auto mt-4 sm:mt-6 md:mt-8 bg-zinc-950 p-3 sm:p-4 md:p-6 rounded-lg">
       {items.map((item, index) => (
         <AccordionItem key={index} title={item.title} content={item.content} />
       ))}
