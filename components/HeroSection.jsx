@@ -1,8 +1,6 @@
 'use client'
 import React, { useRef, useEffect } from 'react'
-import { Button } from "./ui/moving-border";
 import KeyFeatures from './KeyFeatures';
-import { BackgroundLines } from './ui/background-lines';
 import { HoverBorderGradient } from './ui/hover-border-gradient';
 import Accordion from './Accordion';
 import Link from 'next/link';
@@ -43,7 +41,7 @@ function HeroSection() {
       >
         <div className="max-w-3xl mx-auto text-center">
           <motion.h1 
-            className="text-3xl pb-2 sm:text-4xl md:text-6xl lg:text-6xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-white to-gray-300 text-transparent bg-clip-text"
+            className="text-3xl pb-2 sm:text-4xl md:text-6xl lg:text-6xl pt-10 font-bold mb-4 sm:mb-6 bg-gradient-to-r from-white to-gray-300 text-transparent bg-clip-text"
             variants={slideInFromLeft}
             transition={{ delay: 0.2 }}
           >

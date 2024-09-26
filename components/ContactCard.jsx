@@ -56,11 +56,11 @@ function ContactCard() {
                 />
               </div>
               <div>
-                <label htmlFor="jobTitle" className="block text-white mb-1">Job Title</label>
+                <label htmlFor="linkedinProfile" className="block text-white mb-1">LinkedIn Profile</label>
                 <input
                   type="text"
-                  id="jobTitle"
-                  name="jobTitle"
+                  id="linkedinProfile"
+                  name="linkedinProfile"
                   className="bg-transparent border-b border-white p-2 w-full text-white placeholder-gray-400 focus:outline-none text-sm"
                 />
               </div>
