@@ -1,11 +1,22 @@
 import React from 'react'
 
 function ContactCard() {
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    await fetch('/__forms.html', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: new URLSearchParams(formData).toString()
+    });
+    // Handle success or error here
+  };
+
   return (
     <div className="w-full">
       <div className="flex items-center justify-center">
         <div className="bg-black bg-opacity-50 rounded-lg shadow-lg p-6 max-w-2xl w-full">
-          <form name="contact" method="POST" data-netlify="true" className="text-sm">
+          <form name="contact" onSubmit={handleFormSubmit} className="text-sm">
             <input type="hidden" name="form-name" value="contact" />
             <div className="grid grid-cols-2 gap-4 mb-3">
               <div>
