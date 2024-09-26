@@ -4,12 +4,17 @@ function ContactCard() {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
-    await fetch('/__forms.html', {
+    const response = await fetch('/__forms.html', {
         method: 'POST',
         headers: {'Content-Type': 'application/x-www-form-urlencoded'},
         body: new URLSearchParams(formData).toString()
     });
-    // Handle success or error here
+
+    if (response.ok) {
+        alert('Form submitted successfully!');
+    } else {
+        alert('There was an error submitting the form.');
+    }
   };
 
   return (
