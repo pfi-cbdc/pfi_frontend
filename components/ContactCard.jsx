@@ -11,9 +11,10 @@ function ContactCard() {
     });
 
     if (response.ok) {
-        alert('Form submitted successfully!');
+        // Reload the page after successful submission
+        window.location.reload();
     } else {
-        alert('There was an error submitting the form.');
+        console.error('There was an error submitting the form.');
     }
   };
 
