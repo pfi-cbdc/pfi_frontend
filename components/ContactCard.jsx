@@ -5,7 +5,8 @@ function ContactCard() {
     <div className="w-full">
       <div className="flex items-center justify-center">
         <div className="bg-black bg-opacity-50 rounded-lg shadow-lg p-6 max-w-2xl w-full">
-          <form className="text-sm">
+          <form name="contact" method="POST" data-netlify="true" className="text-sm">
+            <input type="hidden" name="form-name" value="contact" />
             <div className="grid grid-cols-2 gap-4 mb-3">
               <div>
                 <label htmlFor="firstName" className="block text-white mb-1">First Name</label>
@@ -14,7 +15,6 @@ function ContactCard() {
                   id="firstName"
                   name="firstName"
                   className="bg-transparent border-b border-white p-2 w-full text-white placeholder-gray-400 focus:outline-none text-sm"
-                 // placeholder="First name"
                 />
               </div>
               <div>
@@ -24,7 +24,6 @@ function ContactCard() {
                   id="lastName"
                   name="lastName"
                   className="bg-transparent border-b border-white p-2 w-full text-white placeholder-gray-400 focus:outline-none text-sm"
-                 // placeholder="Last name"
                 />
               </div>
             </div>
@@ -36,7 +35,6 @@ function ContactCard() {
                   id="email"
                   name="email"
                   className="bg-transparent border-b border-white p-2 w-full text-white placeholder-gray-400 focus:outline-none text-sm"
-                 // placeholder="email"
                   required
                 />
               </div>
@@ -47,7 +45,6 @@ function ContactCard() {
                   id="jobTitle"
                   name="jobTitle"
                   className="bg-transparent border-b border-white p-2 w-full text-white placeholder-gray-400 focus:outline-none text-sm"
-                //  placeholder="job title"
                 />
               </div>
             </div>
@@ -59,7 +56,6 @@ function ContactCard() {
                   id="phone"
                   name="phone"
                   className="bg-transparent border-b border-white p-2 w-full text-white placeholder-gray-400 focus:outline-none text-sm"
-                 // placeholder="Phone number"
                 />
               </div>
               <div>
@@ -69,7 +65,6 @@ function ContactCard() {
                   id="subject"
                   name="subject"
                   className="bg-transparent border-b border-white p-2 w-full text-white placeholder-gray-400 focus:outline-none text-sm"
-                 // placeholder="Subject"
                 />
               </div>
             </div>
@@ -80,7 +75,6 @@ function ContactCard() {
                 name="message"
                 rows="3"
                 className="bg-transparent border-b border-white p-2 w-full text-white placeholder-gray-400 focus:outline-none text-sm"
-               // placeholder="Leave us a message..."
               />
             </div>
             <button
