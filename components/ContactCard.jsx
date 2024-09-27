@@ -22,8 +22,9 @@ function ContactCard() {
     <div className="w-full">
       <div className="flex items-center justify-center">
         <div className="bg-black bg-opacity-50 rounded-lg shadow-lg p-6 max-w-2xl w-full">
-          <form name="contact" onSubmit={handleFormSubmit} className="text-sm">
+          <form name="contact" onSubmit={handleFormSubmit} className="text-sm" netlify-honeypot="bot-field" data-netlify="true">
             <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="bot-field" style={{ display: 'none' }} />
             <div className="grid grid-cols-2 gap-4 mb-3">
               <div>
                 <label htmlFor="firstName" className="block text-white mb-1">First Name</label>
