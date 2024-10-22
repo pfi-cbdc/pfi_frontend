@@ -4,12 +4,17 @@ function ContactCard() {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
+    const body = new URLSearchParams(formData);
     const response = await fetch('/__forms.html', {
         method: 'POST',
         headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-        body: new URLSearchParams(formData).toString()
+        body: body.toString()
     });
-
+    const res = await fetch('http://localhost:3000/api/send-mail', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({firstName: body.get('firstName'), email: body.get('email')})
+    });
     if (response.ok) {
         // Reload the page after successful submission
         window.location.reload();
