@@ -1,6 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
+import ReCAPTCHA from 'react-google-recaptcha'
 
 function ContactCard() {
+  // ReCAPTCHA Verification
+  const [verified, setVerified] = useState(false);
+  const handleCaptcha = (e) => {
+    setVerified(true);
+  }
+
+  // Form Submit Handler
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -32,7 +40,7 @@ function ContactCard() {
     <div className="w-full">
       <div className="flex items-center justify-center">
         <div className="bg-black bg-opacity-50 rounded-lg shadow-lg p-6 max-w-2xl w-full">
-          <form name="contact" onSubmit={handleFormSubmit} className="text-sm" netlify-honeypot="bot-field" data-netlify-recaptcha="true" data-netlify="true">
+          <form name="contact" onSubmit={handleFormSubmit} className="text-sm" netlify-honeypot="bot-field" data-netlify="true">
             <input type="hidden" name="form-name" value="contact" />
             <input type="hidden" name="bot-field" style={{ display: 'none' }} />
             <div className="grid grid-cols-2 gap-4 mb-3">
@@ -105,10 +113,14 @@ function ContactCard() {
                 className="bg-transparent border-b border-white p-2 w-full text-white placeholder-gray-400 focus:outline-none text-sm"
               />
             </div>
-            <div data-netlify-recaptcha="true"></div>
+            <ReCAPTCHA 
+              sitekey={process.env.NEXT_PUBLIC_ReCAPTCHA_SITE_KEY}
+              onChange={handleCaptcha}
+            />
             <button
               type="submit"
               className="bg-yellow-500 text-black py-2 px-4 rounded-md hover:bg-yellow-600 transition duration-300 text-sm"
+              disabled={!verified}
             >
               Submit
             </button>
